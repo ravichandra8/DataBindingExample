@@ -7,8 +7,19 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <h1>event binding with interpolation and property binding and style binding[ngStyle]</h1>
+<input type="text" name="firstname" [ngStyle]='addstyles()' [disabled]='isdisabled'>
+
+<button (click)="showhide()" [ngStyle]='addstyles()'>{{isdisabled?'enable':'disable'}}</button>
+
+<hr/>
+
+
+  <h1>two way data binding with interpolation and event binding</h1>
+
+<input [(ngModel)]='name'>
+<br>
+your value is :{{name}}
+
 </ion-content>
